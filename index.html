@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Visual Steps</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.steps {
+			margin: 50px 150px;
+		}
+
+		.steps__list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.steps__item {
+			display: inline-block;
+			position: relative;
+		}
+
+		.steps__link {
+			text-decoration: none;
+			color: #708090;
+			display: block;
+			padding: 15px 20px;
+			background-color: #D3D3D3;
+			border: 2px #696969 solid;
+			border-radius: 50px;
+		}
+
+		li.steps__item:not(:last-child) a.steps__link {
+			margin-right: 15px;
+		}
+		.steps__link_finished {
+			background-color: #00FF00;
+		}
+
+		.steps__link_active {
+			background-color: #4B0082;
+			color: white;
+		}
+		.steps__list .steps__item:not(:last-child)::after {   
+			content: '';
+			display: inline-block;
+			position: absolute;
+			width: 20px;
+			height: 3px;
+			background-color: #696969;
+			top: 50%;
+			right: -5px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="steps">
+		<ul class="steps__list">
+			<li class="steps__item"><a class="steps__link steps__link_finished" href="#">1</a></li>
+			<li class="steps__item"><a class="steps__link steps__link_finished" href="#">2</a></li>
+			<li class="steps__item"><a class="steps__link steps__link_finished" href="#">3</a></li>
+			<li class="steps__item"><a class="steps__link steps__link_active" href="#">4</a></li>
+			<li class="steps__item"><a class="steps__link" href="#">5</a></li>
+		</ul>
+	</div>
+
+</html>
